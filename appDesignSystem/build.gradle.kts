@@ -3,10 +3,11 @@ plugins {
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.androidLibrary)
+    `maven-publish`
 }
 
 group = "com.yusubov.appdesignsystem"
-version = "0.1.0"
+version = "0.2.0"
 
 android {
     namespace = "com.yusubov.appdesignsystem"
