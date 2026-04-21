@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.yusubov.appdesignsystem"
-version = "0.2.0"
+version = "0.3.0"
 
 android {
     namespace = "com.yusubov.appdesignsystem"
@@ -25,6 +25,7 @@ kotlin {
     jvm("desktop")
 
     androidTarget {
+        publishLibraryVariants("release")
         compilerOptions {
             jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
         }
