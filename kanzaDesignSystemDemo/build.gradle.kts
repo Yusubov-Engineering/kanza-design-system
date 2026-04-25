@@ -19,6 +19,7 @@ kotlin {
             implementation(libs.compose.ui)
             implementation(libs.compose.foundation)
             implementation(libs.compose.runtime)
+            implementation(libs.material.icons.extended)
             implementation(libs.composebook)
         }
     }

@@ -10,6 +10,14 @@ import com.thisisyusub.kanzadesignsystem.AppDsTheme
 import com.yusubov.composebook.ComposeBook
 import com.yusubov.composebook.core.addons.defaults.ThemeOption
 import com.yusubov.composebook.dsl.composeBookConfig
+import com.yusubov.kanzadesignsystemdemo.components.appDsCardUseCase
+import com.yusubov.kanzadesignsystemdemo.components.appDsCheckBoxUseCase
+import com.yusubov.kanzadesignsystemdemo.components.appDsDividerUseCase
+import com.yusubov.kanzadesignsystemdemo.components.appDsDropDownUseCase
+import com.yusubov.kanzadesignsystemdemo.components.appDsIconUseCase
+import com.yusubov.kanzadesignsystemdemo.components.appDsInputFieldUseCase
+import com.yusubov.kanzadesignsystemdemo.components.appDsTextUseCase
+import com.yusubov.kanzadesignsystemdemo.components.appDsToggleUseCase
 import com.yusubov.kanzadesignsystemdemo.foundation.darkColorsUseCase
 import com.yusubov.kanzadesignsystemdemo.foundation.lightColorsUseCase
 import com.yusubov.kanzadesignsystemdemo.foundation.radiiUseCase
@@ -56,7 +64,14 @@ fun DemoApp() {
             }
 
             directory("Components") {
-
+                appDsCardUseCase()
+                appDsCheckBoxUseCase()
+                appDsDividerUseCase()
+                appDsDropDownUseCase()
+                appDsIconUseCase()
+                appDsInputFieldUseCase()
+                appDsTextUseCase()
+                appDsToggleUseCase()
             }
         }
     )
