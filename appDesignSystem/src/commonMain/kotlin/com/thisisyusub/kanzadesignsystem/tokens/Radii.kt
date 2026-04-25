@@ -15,4 +15,15 @@ data class AppDsRadii(
     val lg: Dp = 12.dp,
     val xl: Dp = 16.dp,
     val pill: Dp = 100.dp,
-)
+) : Iterable<Pair<String, Dp>> {
+    override fun iterator(): Iterator<Pair<String, Dp>> {
+        return listOf(
+            "xs" to xs,
+            "sm" to sm,
+            "md" to md,
+            "lg" to lg,
+            "xl" to xl,
+            "pill" to pill,
+        ).iterator()
+    }
+}

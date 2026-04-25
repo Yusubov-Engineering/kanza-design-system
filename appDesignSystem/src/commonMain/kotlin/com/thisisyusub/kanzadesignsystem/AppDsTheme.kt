@@ -17,6 +17,7 @@ import com.thisisyusub.kanzadesignsystem.tokens.LocalAppDsSize
 import com.thisisyusub.kanzadesignsystem.tokens.LocalAppDsSpacing
 import com.thisisyusub.kanzadesignsystem.tokens.LocalAppDsTypography
 
+
 @Composable
 fun AppDsTheme(
     isDark: Boolean = isSystemInDarkTheme(),
@@ -25,15 +26,17 @@ fun AppDsTheme(
     val colors = if (isDark) DarkColors else LightColors
     val typography = AppDsTypography()
 
+    val resolvedTypography = AppDsTypography(
+        heading = typography.heading.copy(color = colors.text),
+        body = typography.body.copy(color = colors.text),
+        bodySmall = typography.bodySmall.copy(color = colors.textSecondary),
+        label = typography.label.copy(color = colors.text),
+        caption = typography.caption.copy(color = colors.textSecondary),
+    )
+
     CompositionLocalProvider(
         LocalAppDsColors provides if (isDark) DarkColors else LightColors,
-        LocalAppDsTypography provides AppDsTypography(
-            heading = typography.heading.copy(color = colors.text),
-            body = typography.body.copy(color = colors.text),
-            bodySmall = typography.bodySmall.copy(color = colors.textSecondary),
-            label = typography.label.copy(color = colors.text),
-            caption = typography.caption.copy(color = colors.textSecondary),
-        ),
+        LocalAppDsTypography provides resolvedTypography,
         LocalAppDsSpacing provides AppDsSpacing(),
         LocalAppDsRadii provides AppDsRadii(),
         LocalAppDsSize provides AppDsSize(),

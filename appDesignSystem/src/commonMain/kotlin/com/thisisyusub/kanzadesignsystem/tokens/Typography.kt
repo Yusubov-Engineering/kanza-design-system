@@ -16,4 +16,14 @@ data class AppDsTypography(
     val bodySmall: TextStyle = TextStyle(fontSize = 12.sp, fontWeight = FontWeight.Normal),
     val label: TextStyle = TextStyle(fontSize = 12.sp, fontWeight = FontWeight.Medium),
     val caption: TextStyle = TextStyle(fontSize = 10.sp, fontWeight = FontWeight.Normal),
-)
+): Iterable<Pair<String, TextStyle>> {
+    override operator fun iterator(): Iterator<Pair<String, TextStyle>> {
+        return listOf(
+            "heading" to heading,
+            "body" to body,
+            "bodySmall" to bodySmall,
+            "label" to label,
+            "caption" to caption
+        ).iterator()
+    }
+}

@@ -19,9 +19,25 @@ data class AppDsColors(
     val componentActive: Color,
     val onComponent: Color,
     val onComponentActive: Color,
-)
+): Iterable<Pair<String, Color>> {
+    override operator fun iterator(): Iterator<Pair<String, Color>> {
+        return listOf(
+            "background" to background,
+            "surface" to surface,
+            "surfaceVariant" to surfaceVariant,
+            "text" to text,
+            "textSecondary" to textSecondary,
+            "border" to border,
+            "borderFocused" to borderFocused,
+            "component" to component,
+            "componentActive" to componentActive,
+            "onComponent" to onComponent,
+            "onComponentActive" to onComponentActive,
+        ).iterator()
+    }
+}
 
-internal val LightColors = AppDsColors(
+val LightColors = AppDsColors(
     background = Color(0xFFFFFFFF),
     surface = Color(0xFFF8F8F8),
     surfaceVariant = Color(0xFFF0F0F0),
@@ -35,7 +51,7 @@ internal val LightColors = AppDsColors(
     onComponentActive = Color(0xFFFFFFFF),
 )
 
-internal val DarkColors = AppDsColors(
+val DarkColors = AppDsColors(
     background = Color(0xFF0A0A0A),
     surface = Color(0xFF141414),
     surfaceVariant = Color(0xFF1E1E1E),

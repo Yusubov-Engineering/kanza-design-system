@@ -24,4 +24,24 @@ data class AppDsSize(
     val indicator: Dp = 6.dp,
     val navigationWidth: Dp = 280.dp,
     val configWidth: Dp = 300.dp,
-)
+) : Iterable<Pair<String, Dp>> {
+    override fun iterator(): Iterator<Pair<String, Dp>> {
+        return listOf(
+            "iconSm" to iconSm,
+            "iconMd" to iconMd,
+            "iconLg" to iconLg,
+            "inputHeight" to inputHeight,
+            "toggleWidth" to toggleWidth,
+            "toggleHeight" to toggleHeight,
+            "toggleThumb" to toggleThumb,
+            "sliderTrackHeight" to sliderTrackHeight,
+            "sliderThumb" to sliderThumb,
+            "divider" to divider,
+            "borderWidth" to borderWidth,
+            "borderWidthFocused" to borderWidthFocused,
+            "indicator" to indicator,
+            "navigationWidth" to navigationWidth,
+            "configWidth" to configWidth,
+        ).iterator()
+    }
+}

@@ -3,6 +3,7 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
     repositories {
+        maven { url = uri("https://jitpack.io") }
         google {
             mavenContent {
                 includeGroupAndSubgroups("androidx")
@@ -17,6 +18,7 @@ pluginManagement {
 
 dependencyResolutionManagement {
     repositories {
+        maven { url = uri("https://jitpack.io") }
         google {
             mavenContent {
                 includeGroupAndSubgroups("androidx")
@@ -33,3 +35,4 @@ plugins {
 }
 
 include(":appDesignSystem")
+include(":kanzaDesignSystemDemo")
