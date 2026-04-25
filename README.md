@@ -12,3 +12,6 @@ It contains the following components for now (some of the are wrappers of materi
 - [AppDsText](appDesignSystem/src/commonMain/kotlin/com/thisisyusub/kanzadesignsystem/components/AppDsText.kt)
 - [AppDsToggle](appDesignSystem/src/commonMain/kotlin/com/thisisyusub/kanzadesignsystem/components/AppDsToggle.kt)
 
+### Here is the link to demo app of kanza design system:
+
+https://yusubov-engineering.github.io/kanza-design-system/
